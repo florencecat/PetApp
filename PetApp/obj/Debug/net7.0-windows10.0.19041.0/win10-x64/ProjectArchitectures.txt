@@ -1,0 +1,1 @@
+D:\Projects\csharp\PetApp\PetApp\PetApp.csproj;x64

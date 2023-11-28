@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetApp.Views.Home">
+    <ScrollView Grid.Row="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="9*"/>
+            </Grid.RowDefinitions>
+            <!--#region Header-->
+            <Grid Grid.Row="0" Margin="5,10,5,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <HorizontalStackLayout>
+                    <Border Margin="10,5,0,0"
+                            Stroke="{StaticResource Primary}"
+                            StrokeThickness="6"
+                            WidthRequest="100" 
+                            HeightRequest="100">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="50"/>
+                        </Border.StrokeShape>
+                        <ImageButton Source="img3.png"/>
+                    </Border>
+                    <VerticalStackLayout VerticalOptions="Center" 
+                                            Margin="5,0,0,0">
+                        <Label FontFamily="Roboto-Bold"
+                                Text="Чендлер"
+                                FontSize="Medium"/>
+                        <Label FontFamily="Roboto-Light" 
+                                Text="Мальчик — 1 год"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Grid.Column="1" 
+                                       HorizontalOptions="Center"
+                                       Spacing="2.5">
+                    <Border Stroke="{StaticResource Primary}"
+                            StrokeThickness="3"
+                            WidthRequest="50" 
+                            HeightRequest="50">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20"/>
+                        </Border.StrokeShape>
+                        <ImageButton WidthRequest="40"
+                                     HeightRequest="40"
+                                     CornerRadius="20"/>
+                    </Border>
+                    <Border Stroke="{StaticResource Primary}"
+                            StrokeThickness="3"
+                            WidthRequest="50" 
+                            HeightRequest="50">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20"/>
+                        </Border.StrokeShape>
+                        <ImageButton WidthRequest="40"
+                                     HeightRequest="40"
+                                     CornerRadius="20"/>
+                    </Border>
+                </HorizontalStackLayout>                            
+            </Grid>
+            <!--#endregion-->
+            <!--#region Body-->
+            <VerticalStackLayout Grid.Row="1" VerticalOptions="Start" Margin="0,10,0,0" Spacing="10">
+                <HorizontalStackLayout HorizontalOptions="Center"
+                                       Spacing="10">
+                    <Border Padding="0" 
+                            Stroke="{StaticResource Primary}" 
+                            WidthRequest="160" 
+                            HeightRequest="160"
+                            StrokeThickness="3">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="30"/>
+                        </Border.StrokeShape>
+                        <Button BackgroundColor="Transparent" 
+                                TextColor="{StaticResource Primary}"
+                                Padding="30"
+                                FontFamily="Roboto-Bold"
+                                FontSize="Medium"
+                                Text="cоветы по уходу"
+                                LineBreakMode="WordWrap"/>
+                    </Border>
+                    <Border Padding="0" 
+                            WidthRequest="160" 
+                            HeightRequest="160"
+                            StrokeThickness="3">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="30"/>
+                        </Border.StrokeShape>
+                        <Button BackgroundColor="Transparent" 
+                                TextColor="{StaticResource Primary}"
+                                Padding="30"
+                                FontFamily="Roboto-Bold"
+                                FontSize="Medium"
+                                Text="ваша порода"
+                                LineBreakMode="WordWrap"/>
+                    </Border>
+                </HorizontalStackLayout>
+                <Border Padding="0" 
+                        Stroke="{StaticResource Primary}"
+                        StrokeThickness="3"
+                        WidthRequest="330" 
+                        HeightRequest="225">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="30"/>
+                    </Border.StrokeShape>
+                </Border>
+                <Border Padding="0" 
+                        Stroke="{StaticResource Primary}"
+                        StrokeThickness="3"
+                        WidthRequest="330" 
+                        HeightRequest="350">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="30"/>
+                    </Border.StrokeShape>
+                </Border>
+            </VerticalStackLayout>
+            <!--#endregion-->
+        </Grid>
+    </ScrollView>
+</ContentPage>
+    

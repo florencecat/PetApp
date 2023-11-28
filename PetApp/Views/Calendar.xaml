@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cal="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar"
+             xmlns:vm="clr-namespace:PetApp.ViewModels"
+             x:Class="PetApp.Views.Calendar"
+             x:DataType="vm:Event">
+    <ScrollView>
+        <VerticalStackLayout Padding="35,15,35,35" Spacing="10">
+            <Border Padding="10,0,10,10"
+                    Margin="0,0,0,10"
+                    Stroke="{StaticResource Primary}"
+                    StrokeThickness="3">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="35"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout HorizontalOptions="Center">
+                    <cal:Calendar FooterArrowVisible="False"
+                                  FooterSectionVisible="False"
+                                  ArrowsBorderColor="{StaticResource Primary}"
+                                  ArrowsBorderWidth="3"
+                                  ArrowsSymbolPrev="&lt;"
+                                  ArrowsSymbolNext="&gt;"
+                                  ArrowsColor="{StaticResource Primary}"
+                                  ArrowsFontFamily="Roboto-Black"
+                                  ArrowsFontSize="18"
+                                  MonthLabelColor="{StaticResource Primary}"
+                                  YearLabelColor="{StaticResource Primary}"
+                                  TodayOutlineColor="{StaticResource Secondary}"
+                                  SelectedDateColor="{StaticResource Secondary}"
+                                  SelectedDayBackgroundColor="{StaticResource Secondary}"
+                                  SelectedDate="{Binding SelectedDate}">
+                    </cal:Calendar>
+                    <Border WidthRequest="45" HeightRequest="45">
+                        <ImageButton Source="create_icon.svg" WidthRequest="20" HeightRequest="20"/>
+                    </Border>
+                </VerticalStackLayout>
+            </Border>
+            <VerticalStackLayout BindableLayout.ItemsSource="{Binding FoundEvents}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Border StrokeThickness="3">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="25"/>
+                            </Border.StrokeShape>
+                            <VerticalStackLayout HorizontalOptions="Center" Padding="10">
+                                <Label Text="{Binding FoundEvents''.Time, StringFormat='{0:t}'}" 
+                                       HorizontalOptions="Center"/>
+                                <Label Text="{Binding FoundEvents''.Name}"
+                                       HorizontalOptions="Center"/>
+                                <Label Text="{Binding FoundEvents''.Description}"
+                                       HorizontalOptions="Center"/>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+    
